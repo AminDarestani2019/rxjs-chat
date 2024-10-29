@@ -9,9 +9,10 @@ import { uuid } from './../util/uuid';
    id: string;
    sentAt: Date;
    isRead: boolean;
-   author: User;
+   author: User|null;
    text: string;
    thread: Thread;
+   sender?: string
 
    constructor(obj?: any) {
      this.id              = obj && obj.id              || uuid();

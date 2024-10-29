@@ -99,7 +99,7 @@ export class MessagesService {
                // belongs to this thread
         return (message.thread.id === thread.id) &&
                // and isn't authored by this user
-               (message.author.id !== user.id);
+               (message.author?.id !== user.id);
       }));
   }
 }
